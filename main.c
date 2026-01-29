@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-/* Here it's just a simple project on 1am */
+/* This is just a simple project I made at 1am */
 
 void helper(){
   printf("good luck budy");
