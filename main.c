@@ -3,9 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-/* Here it's just a DEMO password, puts your password to check  */
-
-char* password = "pedroMucelin32!";
+/* Here it's just a simple project on 1am */
 
 void helper(){
   printf("good luck budy");
@@ -20,7 +18,6 @@ int check_password(char* password){
     printf("Your password len it's to low\n");
     return 0;
   }
-  const char* symbols = "!@#$%^&*-+";
   int check_upper = 0;
   int check_low = 0;
   int check_symbol = 0;
@@ -46,17 +43,18 @@ int check_password(char* password){
 }
 
 
-int main(int argc, char* argv[], char** password){
-  printf(" passchecker\n");
-  printf(" - your password need more than 8 of len and 2 Upper cases + 2 Lower cases + 1 symbols and 2 numbers\n");
-  printf("go ahead: \n");
-  if(argc == 1){
-    helper();
+int main(int argc, char* argv[]) {
+    printf("passchecker\n");
+    printf("- your password needs more than 8 chars\n");
+    printf("- 2 Upper + 2 Lower + 1 Symbol + 2 Numbers\n");
+    if (argc < 2) {
+        helper();
+        return 0;
+    }
+    if (strcmp(argv[1], "help") == 0) {
+        helper();
+        return 0;
+    }
+    check_password(argv[1]);
     return 0;
-  }
-  if(strcmp(argv[1], "help") == 0){
-    helper();
-    return 0;
-  }
-  check_password(*password);
 }
