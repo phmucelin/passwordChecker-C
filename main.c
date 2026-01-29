@@ -35,11 +35,13 @@ int check_password(char* password){
     }
   }
 
-  if(check_upper <= 2 || check_low <= 2 || check_symbol <= 1 || check_number <= 2){
-    printf("Sorry but your password didn't pass in the check\n");
-  }else{
-    printf("- YES! your password passed in the checker");
-  }
+  if (check_upper < 2 || check_low < 2 || check_symbol < 1 || check_number < 2)
+    {
+      printf("Sorry but your password didn't pass in the check\n");
+    }else
+    {
+      printf("- YES! your password passed in the checker");
+    }
   return 1;
 }
 
