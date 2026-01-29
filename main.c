@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <create_hard_pass.h>
+#include <hash_password.h>
 
 /* This is just a simple project I made at 1am */
 
