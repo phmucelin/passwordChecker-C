@@ -8,16 +8,16 @@
 /* This is just a simple project I made at 1am */
 
 void helper(){
-  printf("good luck budy");
+  printf("good luck buddy");
 }
 
 int check_password(char* password){
   if(password == NULL || strlen(password) == 0){
-    printf("Sua senha esta invalida.\n");
+    printf("nice try.\n");
     return 0;
   }
   if(strlen(password) < 6){
-    printf("Your password len it's to low\n");
+    printf("Your password is too short\n");
     return 0;
   }
   int check_upper = 0;
@@ -39,7 +39,7 @@ int check_password(char* password){
 
   if (check_upper < 2 || check_low < 2 || check_symbol < 1 || check_number < 2)
     {
-      printf("Sorry but your password didn't pass in the check\n");
+      printf("Sorry, your password didn't pass the check\n");
     }else
     {
       printf("- YES! your password passed in the checker");
