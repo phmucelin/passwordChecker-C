@@ -23,17 +23,18 @@ int check_password(char* password){
   int check_symbol = 0;
   int check_number = 0;
   int i;
-  for(i = 0; i<(strlen(password) - 1); i++){
-    if(isupper(password[i])){
+  for (i = 0; i < strlen(password); i++) {
+    if (isupper(password[i])) {
       check_upper++;
-    }else if(islower(password[i])){
+    } else if (islower(password[i])) {
       check_low++;
-    } else if(isalnum(password[i])){
-      check_symbol++;
-    }else if(isdigit(password[i])){
+    } else if (isdigit(password[i])) {
       check_number++;
+    } else {
+      check_symbol++;
     }
   }
+
   if(check_upper <= 2 || check_low <= 2 || check_symbol <= 1 || check_number <= 2){
     printf("Sorry but your password didn't pass in the check\n");
   }else{
